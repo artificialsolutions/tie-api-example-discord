@@ -1,5 +1,5 @@
 # tie-api-example-discord
-This node.js example connector allows you to make your Teneo solution available as a bot on Discord. The connector acts as middleware between Discord and Teneo. The bot on Discord will respond to direct messages. In addition to that, you can also configure it to respond to all messages in a specific channel. 
+This node.js example connector allows you to make your Teneo solution available as a bot on [Discord](https://discordapp.com/). The connector acts as middleware between Discord and Teneo. The bot on Discord will respond to direct messages. In addition to that, you can configure it to respond to all messages in a specific channel. 
 
 This guide will take you through the steps needed to make your Teneo bot available on Discord.
 
@@ -25,9 +25,9 @@ Click the button below to deploy the connector to Heroku:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg?classes=noborder)](https://heroku.com/deploy?template=https://github.com/artificialsolutions/tie-api-example-discord)
 
 In the 'Config Vars' section, add the following:
-* **DISCORD_TOKEN:** The `token` you copied when you created the Discord bot server
-* **DISCORD_CHANNEL:** The bot will respond to direct messages only. If you want your bot to respond to *any* message from *any* user in particular channel, provide the name of that channel here.
-* **TENEO_ENGINE_URL:** The engine url
+* **DISCORD_TOKEN:** The `token` you copied when you created the Discord bot application.
+* **DISCORD_CHANNEL:** The bot will respond to direct messages only. If you want your bot to respond to *any* message from *any* user in a particular channel, provide the name of that channel here.
+* **TENEO_ENGINE_URL:** The engine url.
 
 If you prefer to run your bot locally, see [Running the connector locally](#running-the-connector-locally).
 

@@ -8,13 +8,13 @@
     ],
     "repository": "https://github.com/artificialsolutions/tie-api-example-slack-events-api/",
     "env": {
-        "SLACK_SIGNING_SECRET": {
-            "description": "Please input your Slack Signing Secret",
+        "DISCORD_TOKEN": {
+            "description": "Please input your Discord token",
             "required":true
         },
-        "SLACK_BOT_USER_OAUTH_ACCESS_TOKEN": {
-            "description": "Please input your Slack Bot User Oauth Access Token",
-            "required":true
+        "DISCORD_CHANNEL": {
+            "description": "If you want the bot to respond to any message in a particular channel, enter the channel name here.",
+            "required":false
         },
         "TENEO_ENGINE_URL": {
             "description": "Please input your Teneo Engine URL. https://some.engine/instance/",
