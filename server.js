@@ -5,7 +5,9 @@ const express = require('express');
 
 // mandatory environment variables
 const discordToken = process.env.DISCORD_TOKEN;
+const discordChannel = process.env.DISCORD_CHANNEL || "";
 const teneoEngineUrl = process.env.TENEO_ENGINE_URL;
+
 
 // initialise teneo client
 const teneoApi = TIE.init(teneoEngineUrl);
@@ -18,7 +20,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if ((message.channel.name === 'general' || message.channel.type === "dm") && !message.author.bot) {
+    if ((message.channel.name === discordChannel || message.channel.type === "dm") && !message.author.bot) {
         handleMessage(sessionHandler, message);
     }
 });
