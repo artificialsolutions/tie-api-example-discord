@@ -1,9 +1,11 @@
 # tie-api-example-discord
-This node.js example connector allows you to make your Teneo solution available as a bot on Discord. The connector acts as middleware between Discord and Teneo. This guide will take you through the steps of creating a new Dicord bot and deploying the connector to respond to messages from Discord users.
+This node.js example connector allows you to make your Teneo solution available as a bot on Discord. The connector acts as middleware between Discord and Teneo. The bot on Discord will respond to direct messages. In addition to that, you can also configure it to respond to all messages in a specific channel. 
+
+This guide will take you through the steps needed to make your Teneo bot available on Discord.
 
 ## Prerequisites
-### Discord account server
-You need to have a discord account to create a Discord Bot application. You also need admin access to a Discord server where you can add the bot.
+### Discord account
+You need to have a discord account to create a Discord bot application. You also need admin access to a Discord server where you can add the bot.
 
 ### Teneo Engine
 Your teneo bot/solution needs to be published and you need to know the engine url.
