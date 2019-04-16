@@ -1,13 +1,28 @@
+/**
+ * Copyright 2019 Artificial Solutions. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const TIE = require('@artificialsolutions/tie-api-client');
-const express = require('express');
+const express = require('express'); // only needed to keep connector alive on heroku
 
 // mandatory environment variables
 const discordToken = process.env.DISCORD_TOKEN;
 const discordChannel = process.env.DISCORD_CHANNEL || "";
 const teneoEngineUrl = process.env.TENEO_ENGINE_URL;
-
 
 // initialise teneo client
 const teneoApi = TIE.init(teneoEngineUrl);
@@ -19,12 +34,15 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 
+// receive message form discord
 client.on('message', message => {
+    // only respond to direct message, messages from a particular channel and don't let the bot respond to itself
     if ((message.channel.name === discordChannel || message.channel.type === "dm") && !message.author.bot) {
         handleMessage(sessionHandler, message);
     }
 });
 
+// process the message from the user
 async function handleMessage(sessionHandler, message) {
 
     try {
