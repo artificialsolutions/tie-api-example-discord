@@ -17,7 +17,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const TIE = require('@artificialsolutions/tie-api-client');
-const express = require('express'); // only needed to keep connector alive on heroku
 
 // mandatory environment variables
 const discordToken = process.env.DISCORD_TOKEN;
@@ -104,10 +103,3 @@ function SessionHandler() {
 }
 
 client.login(discordToken);
-
-// strictly speaking we don't need the code below, this is only here to prevent heroku from killing the process 
-const expressApp = express();
-expressApp.get('/', function(req, res){
-    res.send('Connector running');
-});
-expressApp.listen(process.env.PORT || 3746)
