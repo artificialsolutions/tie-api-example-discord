@@ -25,9 +25,8 @@ npm install
 
 ### Create a Discord bot application
 Follow the instructions here to create a Discord bot application: [Setting up a bot application](https://discordjs.guide/preparations/setting-up-a-bot-application.html)
-Make sure 
 
-Make sure you take note and store safely, <mark>client_id</mark> of the new app, and the <mark>token</mark> of its bot. These will needed when you start the connector.
+Take note of <mark>client_id</mark> of the new app, and the <mark>token</mark> of its bot, and store them safely. These will needed when you start the connector.
 
 Also, the bot's username, which is formatted 'YourBot#1234' can be used later on to send Direct Messages to this bot.
 
