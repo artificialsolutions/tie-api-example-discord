@@ -25,16 +25,24 @@ npm install
 
 ### Create a Discord bot application
 Follow the instructions here to create a Discord bot application: [Setting up a bot application](https://discordjs.guide/preparations/setting-up-a-bot-application.html)
+Make sure 
 
-!!!! Make sure you remember the <mark>token</mark>, you will need it when you start the connector.
+Make sure you take note and store safely, <mark>client_id</mark> of the new app, and the <mark>token</mark> of its bot. These will needed when you start the connector.
+
+Also, the bot's username, which is formatted 'YourBot#1234' can be used later on to send Direct Messages to this bot.
 
 ### Add the bot to your Discord server
-Follow the instructions here to add the bot to your server: [Adding your bot to servers](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links)
+Follow the instructions here to add the bot to your server: [Adding your bot to servers](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links).
+This involves opening a Bot inviting link in your browser which is contructed using the 'client_id' of the app that was obtained the previous step:
+
+https://discord.com/oauth2/authorize?client_id=12345&scope=bot
+
+Add the bot to an existing Server and authorize it. Create a Server if needed, by clicking on the '+' shaped Add Server button from the left menu of the Discord Chat.
 
 ### Start the connector
 Start the connector with the following environment variables:
 * **DISCORD_TOKEN:** The <mark>token</mark> you copied when you created the Discord bot application.
-* **DISCORD_CHANNEL:** The bot will respond to direct messages only. If you want your bot to respond to *any* message from *any* user in a particular channel, provide the name of that channel here.
+* **DISCORD_CHANNEL:** The bot will respond to direct messages only. If you want your bot to respond to *any* message from *any* user in a particular channel, provide the name of that channel here. For example, 'general' is a common channel name that is usually created automatically on every new Discord server.
 * **TENEO_ENGINE_URL:** The engine url.
 
 To start the connector (replacing the environment variables with the appropriate values) use the following command:
