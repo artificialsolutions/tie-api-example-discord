@@ -30,7 +30,11 @@ const teneoApi = TIE.init(teneoEngineUrl);
 const sessionHandler = SessionHandler();
 
 client.once('ready', () => {
-    console.log('Ready!');
+    console.log('Once Ready!');
+});
+
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 // receive message form discord
@@ -103,3 +107,4 @@ function SessionHandler() {
 }
 
 client.login(discordToken);
+client

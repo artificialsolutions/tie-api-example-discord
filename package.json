@@ -1,6 +1,6 @@
 {
   "name": "@artificialsolutions/tie-api-example-discord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic example Discord chatbot using Teneo",
   "main": "server.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "Lucas Willering",
   "license": "Apache-2.0",
   "dependencies": {
-    "@artificialsolutions/tie-api-client": "^1.3.1",
+    "@artificialsolutions/tie-api-client": "^1.3.7",
     "discord.js": "^11.4.2"
   }
 }
